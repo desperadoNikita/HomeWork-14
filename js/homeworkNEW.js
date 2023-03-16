@@ -1,9 +1,11 @@
 class Car {
+    #engine;
+    
     constructor(brand, model, price) {
       this.brand = brand;
       this.model = model;
       this.price = price;
-      this._engine = 'unknown';
+      this.#engine = 'unknown';
     }
   
     getPrice() {
@@ -15,11 +17,11 @@ class Car {
     }
   
     get engine() {
-      return this._engine;
+      return this.#engine;
     }
   
     set engine(newEngine) {
-      this._engine = newEngine;
+      this.#engine = newEngine;
     }
   }
   
